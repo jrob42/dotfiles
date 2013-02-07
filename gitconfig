@@ -1,11 +1,20 @@
 [user]
-  name = Harlow Ward
-  email = harlow@thoughtbot.com
+  name = John Roberts
+  email = jroberts@fanhattan.com
 [push]
   default = tracking
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [alias]
+  st = status
+  di = diff
+  co = checkout
+  ci = commit
+  br = branch
+  sta = stash
+  llog = log
+  amend = commit --amend -C HEAD
+  reauthor = commit --amend -C HEAD --reset-author
   ci = commit -v
   plre = pull --rebase
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
@@ -17,8 +26,14 @@
   lgl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -50
 [core]
   editor = vim -f
-  excludesfile = /Users/harlow/.gitignore
+  excludesfile = /Users/jroberts/.gitignore
 [credential]
   helper = osxkeychain
 [help]
   autocorrect = 1
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
